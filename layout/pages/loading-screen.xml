@@ -8,8 +8,19 @@
 	</scripts>
 
 	<Panel class="loadingscreen">
-		<Image id="BackgroundImageDefault" class="full" src="file://{materials}/panorama/bg_00.vtf" />
-		<Image id="BackgroundImage" class="full hide" scaling="stretch-to-cover-preserve-aspect" />
+		<!--Image id="BackgroundImageDefault" class="full hide" src="file://{materials}/panorama/bg_00.vtf" /-->
+		<!--Image id="BackgroundImage" class="full hide" scaling="stretch-to-cover-preserve-aspect" /-->
+
+		<Movie
+			id="LoadingMovie"
+			class="full"
+			src="file://{media}/community_bg1.webm"
+			sound=""
+			controls="none"
+			repeat="true"
+			hittest="false"
+		>
+		</Movie>
 
 		<Panel class="full flow-down">
 			<Panel class="loadingscreen__details">

@@ -21,16 +21,17 @@ class LoadingScreen {
 	static {
 		$.RegisterForUnhandledEvent('UnloadLoadingScreenAndReinit', this.init.bind(this));
 
-		$.RegisterEventHandler(
-			'PanelLoaded',
-			this.panels.backgroundImage,
-			() => (this.panels.backgroundImage.visible = true)
-		);
-		$.RegisterEventHandler(
-			'ImageFailedLoad',
-			this.panels.backgroundImage,
-			() => (this.panels.backgroundImage.visible = false)
-		);
+		//$.RegisterEventHandler(
+		//	'PanelLoaded',
+		//	this.panels.backgroundImage,
+		//	() => (this.panels.backgroundImage.visible = true)
+		//);
+		//$.RegisterEventHandler(
+		//	'ImageFailedLoad',
+		//	this.panels.backgroundImage,
+		//	() => (this.panels.backgroundImage.visible = false)
+		//);
+		$('#LoadingMovie').Play();
 	}
 
 	static init() {
@@ -39,7 +40,7 @@ class LoadingScreen {
 		this.panels.author.visible = false;
 		this.panels.tierAndType.visible = false;
 		this.panels.numZones.visible = false;
-		this.panels.backgroundImage.visible = false;
+		//this.panels.backgroundImage.visible = false;
 	}
 
 	static updateLoadingScreenInfo(mapName) {
@@ -55,7 +56,7 @@ class LoadingScreen {
 			this.panels.author.visible = false;
 			this.panels.tierAndType.visible = false;
 			this.panels.numZones.visible = false;
-			this.panels.backgroundImage.SetImage('');
+			//this.panels.backgroundImage.SetImage('');
 
 			return;
 		}
@@ -75,6 +76,6 @@ class LoadingScreen {
 		this.panels.tierAndType.visible = true;
 		this.panels.numZones.visible = true;
 
-		this.panels.backgroundImage.SetImage(mapData.thumbnail.urlLarge);
+		//this.panels.backgroundImage.SetImage(mapData.thumbnail.urlLarge);
 	}
 }
